@@ -37,7 +37,7 @@ export function Header({ mode, onChange }: { mode: Mode; onChange: (m: Mode) => 
             <span className="absolute inline-flex h-full w-full rounded-full bg-success opacity-60 animate-ping" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
           </span>
-          <span className="text-[12px] text-muted-foreground">Sparkasse account connected</span>
+          <span className="text-[12px] text-muted-foreground">Sparkasse · Stuttgart</span>
           <span className="text-success text-[12px]">✓</span>
         </div>
       </div>

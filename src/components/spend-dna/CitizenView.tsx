@@ -43,7 +43,7 @@ export function CitizenView() {
           <div className="relative">
             <div className="flex items-center justify-between">
               <div>
-                <div className="text-[12px] uppercase tracking-wider text-muted-foreground">Sparkasse · Girokonto</div>
+                <div className="text-[12px] uppercase tracking-wider text-muted-foreground">Mia Schmidt · Sparkasse Stuttgart</div>
                 <div className="text-[12px] text-muted-foreground/70 mt-0.5">DE89 •••• 4827</div>
               </div>
               <div className="text-[11px] px-2 py-1 rounded-md bg-success/10 text-success border border-success/20">+€312 this month</div>
@@ -128,19 +128,20 @@ export function CitizenView() {
           <div className="p-5">
             <div className="flex items-start justify-between">
               <div>
-                <h3 className="text-[17px] font-semibold tracking-tight">🥐 Wölffer Bakery</h3>
+                <h3 className="text-[17px] font-semibold tracking-tight">☕ Café Müller</h3>
                 <div className="flex items-center gap-1.5 mt-1 text-[12px] text-muted-foreground">
-                  <MapPin className="h-3 w-3" /> 3 min walk · Rosenthaler Str.
+                  <MapPin className="h-3 w-3" /> 80m away · Old Town
                 </div>
               </div>
             </div>
 
             <div className="mt-4 p-3 rounded-lg bg-surface-elevated border border-border">
-              <div className="text-[13.5px]">Croissant + Coffee</div>
-              <div className="mt-1 flex items-baseline gap-2">
+              <div className="text-[13.5px] font-medium text-foreground">Cold outside? Your cappuccino is waiting.</div>
+              <div className="text-[11.5px] text-muted-foreground mt-1">Cappuccino + Croissant</div>
+              <div className="mt-2 flex items-baseline gap-2">
                 <span className="text-2xl font-semibold tabular-nums">€3.50</span>
-                <span className="text-sm text-muted-foreground line-through tabular-nums">€5.00</span>
-                <span className="ml-auto text-[11px] text-warning">until 9:00 am</span>
+                <span className="text-sm text-muted-foreground line-through tabular-nums">€5.20</span>
+                <span className="ml-auto text-[11px] text-warning">until 1:00 PM</span>
               </div>
             </div>
 
@@ -162,9 +163,9 @@ export function CitizenView() {
                   className="overflow-hidden mt-3 space-y-2 text-[12.5px] text-muted-foreground"
                 >
                   {[
-                    "You bought at Wölffer 4× in May",
-                    "Pattern: weekday morning pastry buyer",
-                    "Within 200m of your morning route",
+                    "It's 11°C and overcast — you respond to warm offers",
+                    "Café Müller traffic is LOW right now (-23%)",
+                    "You've stopped twice in last 10 minutes (browsing pattern)",
                     "Match score: 94%",
                   ].map((r, i) => (
                     <li key={i} className="flex items-start gap-2">
