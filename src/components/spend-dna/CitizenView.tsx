@@ -131,7 +131,48 @@ export function CitizenView() {
 
       {/* RIGHT — offer */}
       <div className="space-y-5">
-        <div className="rounded-[12px] bg-card border border-border overflow-hidden">
+        <AnimatePresence mode="wait">
+        {redeemed ? (
+          <motion.div
+            key="redeemed"
+            initial={{ opacity: 0, y: 8, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="rounded-[12px] bg-card border border-success/30 overflow-hidden relative"
+          >
+            <div className="absolute -top-16 -right-16 h-44 w-44 rounded-full bg-success/15 blur-3xl" />
+            <div className="relative p-5 flex items-start gap-4">
+              <div className="h-11 w-11 rounded-full bg-success/15 border border-success/30 flex items-center justify-center shrink-0">
+                <Check className="h-5 w-5 text-success" strokeWidth={2.6} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10.5px] uppercase tracking-[0.14em] text-success font-medium">Redeemed today</span>
+                  <span className="text-[10.5px] text-muted-foreground">· 12:14 PM</span>
+                </div>
+                <h3 className="mt-1 text-[16px] font-semibold tracking-tight">Café Müller</h3>
+                <p className="text-[12.5px] text-muted-foreground mt-0.5">
+                  <span className="text-success font-medium">€1.70 cashback</span> credited to your Sparkasse account
+                </p>
+              </div>
+            </div>
+            <div className="px-5 pb-4">
+              <div className="h-px bg-border my-1" />
+              <div className="flex items-center justify-between pt-3 text-[11.5px] text-muted-foreground">
+                <span>Powered by Spend DNA · 94% match</span>
+                <button className="text-primary hover:text-primary-glow transition-colors">View receipt</button>
+              </div>
+            </div>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="offer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.25 }}
+            className="rounded-[12px] bg-card border border-border overflow-hidden"
+          >
           <div className="relative h-44 bg-gradient-to-br from-warning/30 via-warning/10 to-primary/20 flex items-center justify-center">
             <Croissant className="h-20 w-20 text-warning drop-shadow-[0_0_20px_oklch(0.78_0.16_75/0.5)]" />
             <div className="absolute top-3 left-3 text-[10px] font-medium px-2 py-1 rounded-md bg-background/70 backdrop-blur border border-border text-foreground">
@@ -195,21 +236,19 @@ export function CitizenView() {
 
             <div className="mt-5 flex items-center gap-3">
               <button
-                onClick={() => setActivated(true)}
-                className={`flex-1 h-10 rounded-[8px] text-[13.5px] font-medium transition-all duration-200 ${
-                  activated
-                    ? "bg-success text-background"
-                    : "bg-primary hover:bg-primary-glow text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
-                }`}
+                onClick={() => setModalOpen(true)}
+                className="flex-1 h-10 rounded-[8px] text-[13.5px] font-medium transition-all duration-200 bg-primary hover:bg-primary-glow text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
               >
-                {activated ? "✓ Offer activated" : "Activate offer"}
+                Activate offer
               </button>
               <button className="text-[12.5px] text-muted-foreground hover:text-foreground transition-colors">
                 Not now
               </button>
             </div>
           </div>
-        </div>
+          </motion.div>
+        )}
+        </AnimatePresence>
 
         <div className="rounded-[12px] bg-card border border-border p-4 flex items-center gap-3">
           <div className="h-8 w-8 rounded-md bg-primary/15 text-primary flex items-center justify-center">
@@ -223,5 +262,7 @@ export function CitizenView() {
         </div>
       </div>
     </motion.div>
+    <RedeemModal open={modalOpen} onClose={() => setModalOpen(false)} onRedeem={handleRedeem} />
+    </>
   );
 }
