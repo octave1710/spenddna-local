@@ -4,7 +4,7 @@ import {
   PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip,
   LineChart, Line, CartesianGrid,
 } from "recharts";
-import { Mic, Loader2, Users, ShoppingBasket, Send, TrendingUp } from "lucide-react";
+import { Mic, Loader2, Users, ShoppingBasket, Send, TrendingUp, Pencil, Flame, Sparkles, Clock } from "lucide-react";
 
 const segmentsData = [
   { name: "Morning Commuter", value: 412 },
@@ -103,6 +103,25 @@ export function MerchantView() {
     >
       {/* LEFT — dashboard */}
       <div className="space-y-5">
+        {/* Active goals / merchant rules */}
+        <div className="rounded-[12px] bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/30 p-4 flex items-center gap-4">
+          <div className="h-9 w-9 rounded-md bg-primary/20 border border-primary/30 flex items-center justify-center text-base shrink-0">
+            📋
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2">
+              <h4 className="text-[13px] font-semibold tracking-tight">Active goals</h4>
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/20 text-primary border border-primary/30">3 rules</span>
+            </div>
+            <p className="mt-0.5 text-[12px] text-muted-foreground">
+              Fill quiet hours <span className="text-border-strong">·</span> Max 25% discount <span className="text-border-strong">·</span> Pastry surplus priority
+            </p>
+          </div>
+          <button className="h-7 w-7 rounded-md text-muted-foreground hover:text-foreground hover:bg-surface-elevated transition-colors flex items-center justify-center shrink-0">
+            <Pencil className="h-3.5 w-3.5" />
+          </button>
+        </div>
+
         <div className="grid grid-cols-4 gap-4">
           <Kpi label="Customers in 1.5km" value="1,247" delta="+4.2%" icon={Users} />
           <Kpi label="Active buyers" value="312" delta="+1.8%" icon={TrendingUp} />
@@ -246,35 +265,107 @@ export function MerchantView() {
           )}
         </div>
 
-        {/* offer variants */}
+        {/* offer variants — generative UI */}
         <AnimatePresence>
           {showOffers && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="mt-5 space-y-2.5"
+              className="mt-5 space-y-3"
             >
-              <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Offer variants</div>
-              {offerVariants.map((o, i) => (
-                <motion.div
-                  key={o.label}
-                  initial={{ opacity: 0, x: 16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                  className="rounded-[12px] border border-border bg-surface-elevated/60 p-3 hover:border-primary/40 transition-colors"
-                >
+              <div className="flex items-center justify-between">
+                <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Generated offers</div>
+                <div className="text-[10.5px] text-muted-foreground">3 variants · pick one</div>
+              </div>
+
+              {/* VARIANT A — Factual */}
+              <motion.div
+                initial={{ opacity: 0, x: 16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3 }}
+                className="rounded-[10px] bg-white text-neutral-900 border border-neutral-200 p-4 shadow-sm"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase tracking-[0.14em] text-neutral-500">Variant A · Factual</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-sm bg-neutral-100 text-neutral-600 border border-neutral-200">Neutral</span>
+                </div>
+                <h4 className="mt-2 text-[16px] font-semibold tracking-tight leading-tight">20% off pastries</h4>
+                <p className="mt-1 text-[12px] text-neutral-600">12pm–2pm today · 47 nearby customers match</p>
+                <div className="mt-3 pt-3 border-t border-neutral-200 flex items-center justify-between text-[11px]">
+                  <div className="text-neutral-600">Est. <span className="text-neutral-900 font-medium tabular-nums">18–24</span> redemptions · <span className="text-neutral-900 font-medium tabular-nums">€72–96</span></div>
+                </div>
+                <button className="mt-3 w-full h-9 rounded-[6px] bg-neutral-900 text-white text-[12.5px] font-medium hover:bg-neutral-800 transition-colors">
+                  Push variant A
+                </button>
+              </motion.div>
+
+              {/* VARIANT B — Emotional */}
+              <motion.div
+                initial={{ opacity: 0, x: 16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.12 }}
+                className="rounded-[16px] p-4 relative overflow-hidden border border-warning/30"
+                style={{
+                  background: "linear-gradient(135deg, oklch(0.78 0.16 75 / 0.35) 0%, oklch(0.7 0.18 50 / 0.25) 50%, oklch(0.62 0.22 295 / 0.15) 100%)",
+                }}
+              >
+                <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-warning/30 blur-2xl" />
+                <div className="relative">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10.5px] font-medium text-primary">{o.label}</span>
-                    <span className="text-[10.5px] px-1.5 py-0.5 rounded bg-surface border border-border text-muted-foreground">{o.tag}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-warning font-medium flex items-center gap-1.5">
+                      <Sparkles className="h-3 w-3" /> Variant B · Emotional
+                    </span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-background/40 backdrop-blur text-foreground border border-warning/30">Warm</span>
                   </div>
-                  <p className="mt-1.5 text-[12.5px] leading-snug">{o.text}</p>
-                  <div className="mt-2 flex items-center gap-3 text-[11px]">
-                    <span className="text-muted-foreground">Proj. <span className="text-foreground tabular-nums">{o.redemptions}</span> redemptions</span>
-                    <span className="text-muted-foreground">·</span>
-                    <span className="text-success tabular-nums">{o.revenue}</span>
+                  <h4 className="mt-2.5 text-[17px] font-semibold tracking-tight leading-snug" style={{ fontFamily: "Georgia, serif" }}>
+                    Cold outside? Your cappuccino is waiting.
+                  </h4>
+                  <p className="mt-1.5 text-[12px] text-foreground/80 italic">Café Müller has fresh batches · 12pm–2pm</p>
+                  <div className="mt-3 pt-3 border-t border-warning/20 flex items-center justify-between text-[11px]">
+                    <div className="text-muted-foreground">Est. <span className="text-foreground font-medium tabular-nums">22–30</span> redemptions · <span className="text-warning font-medium tabular-nums">€88–120</span></div>
                   </div>
-                </motion.div>
-              ))}
+                  <button className="mt-3 w-full h-9 rounded-full bg-warning text-background text-[12.5px] font-medium hover:brightness-110 transition-all shadow-[0_8px_20px_-8px_oklch(0.78_0.16_75)]">
+                    Push variant B
+                  </button>
+                </div>
+              </motion.div>
+
+              {/* VARIANT C — Urgent */}
+              <motion.div
+                initial={{ opacity: 0, x: 16 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.24 }}
+                className="relative rounded-[10px] p-4 bg-gradient-to-br from-destructive/15 via-background to-primary/15 border-2 border-destructive/40"
+                style={{ boxShadow: "0 0 0 0 oklch(0.65 0.24 25 / 0.4)" }}
+              >
+                <motion.div
+                  animate={{ opacity: [0.4, 0.9, 0.4] }}
+                  transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 rounded-[10px] border-2 border-destructive pointer-events-none"
+                />
+                <div className="relative">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-destructive font-bold flex items-center gap-1.5">
+                      <Flame className="h-3 w-3" /> Variant C · Urgent
+                    </span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded-sm bg-destructive/20 text-destructive border border-destructive/40 font-mono uppercase tracking-wider">Scarcity</span>
+                  </div>
+                  <h4 className="mt-2.5 text-[17px] font-bold tracking-tight leading-tight uppercase">
+                    Last <span className="text-destructive">50</span> croissants
+                    <span className="block text-[12px] font-medium normal-case tracking-normal text-muted-foreground mt-0.5">Today only</span>
+                  </h4>
+                  <p className="mt-2 text-[12px] text-foreground/80 flex items-center gap-1.5">
+                    <Clock className="h-3 w-3 text-destructive" />
+                    Closing in <span className="text-destructive font-semibold">2 hours</span> · Don't miss out
+                  </p>
+                  <div className="mt-3 pt-3 border-t border-destructive/20 flex items-center justify-between text-[11px]">
+                    <div className="text-muted-foreground">Est. <span className="text-foreground font-medium tabular-nums">28–35</span> redemptions · <span className="text-success font-medium tabular-nums">€98–140</span></div>
+                  </div>
+                  <button className="mt-3 w-full h-9 rounded-[6px] bg-destructive text-destructive-foreground text-[12.5px] font-bold uppercase tracking-wider hover:brightness-110 transition-all">
+                    Push variant C
+                  </button>
+                </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
