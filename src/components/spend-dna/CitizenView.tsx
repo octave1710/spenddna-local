@@ -2,8 +2,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Coffee, ShoppingBag, Train, Utensils, Dumbbell, Music,
-  Sun, Croissant, ChevronDown, MapPin, Sparkles
+  Sun, Croissant, ChevronDown, MapPin, Sparkles, Check
 } from "lucide-react";
+import { RedeemModal } from "./RedeemModal";
 
 const transactions = [
   { logo: "WB", name: "Wölffer Bakery", cat: "Café", amount: -4.20, time: "Today, 8:12", icon: Coffee, color: "oklch(0.78 0.16 75)" },
@@ -49,7 +50,15 @@ export function CitizenView() {
               <div className="text-[11px] px-2 py-1 rounded-md bg-success/10 text-success border border-success/20">+€312 this month</div>
             </div>
             <div className="mt-5 flex items-baseline gap-2">
-              <span className="text-[44px] font-semibold tracking-tight tabular-nums">€4,827.30</span>
+              <motion.span
+                key={balance}
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="text-[44px] font-semibold tracking-tight tabular-nums"
+              >
+                €{balance.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              </motion.span>
               <span className="text-muted-foreground text-sm">available</span>
             </div>
           </div>
