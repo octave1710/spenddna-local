@@ -1,26 +1,28 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { Header } from "@/components/spend-dna/Header";
+import { CitizenView } from "@/components/spend-dna/CitizenView";
+import { MerchantView } from "@/components/spend-dna/MerchantView";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Spend DNA — Hyperlocal commerce powered by bank data" },
+      { name: "description", content: "Spend DNA turns Sparkasse transaction data into hyperlocal offers for citizens and AI-driven audience intelligence for merchants." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
+  const [mode, setMode] = useState<"citizen" | "merchant">("citizen");
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <Header mode={mode} onChange={setMode} />
+      <AnimatePresence mode="wait">
+        {mode === "citizen" ? <CitizenView key="c" /> : <MerchantView key="m" />}
+      </AnimatePresence>
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
