@@ -4,7 +4,7 @@ import {
   PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip,
   LineChart, Line, CartesianGrid,
 } from "recharts";
-import { Mic, Loader2, Users, ShoppingBasket, Send, TrendingUp } from "lucide-react";
+import { Mic, Loader2, Users, ShoppingBasket, Send, TrendingUp, Pencil, Flame, Sparkles, Clock } from "lucide-react";
 
 const segmentsData = [
   { name: "Morning Commuter", value: 412 },
@@ -103,6 +103,25 @@ export function MerchantView() {
     >
       {/* LEFT — dashboard */}
       <div className="space-y-5">
+        {/* Active goals / merchant rules */}
+        <div className="rounded-[12px] bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/30 p-4 flex items-center gap-4">
+          <div className="h-9 w-9 rounded-md bg-primary/20 border border-primary/30 flex items-center justify-center text-base shrink-0">
+            📋
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2">
+              <h4 className="text-[13px] font-semibold tracking-tight">Active goals</h4>
+              <span className="text-[10px] px-1.5 py-0.5 rounded bg-primary/20 text-primary border border-primary/30">3 rules</span>
+            </div>
+            <p className="mt-0.5 text-[12px] text-muted-foreground">
+              Fill quiet hours <span className="text-border-strong">·</span> Max 25% discount <span className="text-border-strong">·</span> Pastry surplus priority
+            </p>
+          </div>
+          <button className="h-7 w-7 rounded-md text-muted-foreground hover:text-foreground hover:bg-surface-elevated transition-colors flex items-center justify-center shrink-0">
+            <Pencil className="h-3.5 w-3.5" />
+          </button>
+        </div>
+
         <div className="grid grid-cols-4 gap-4">
           <Kpi label="Customers in 1.5km" value="1,247" delta="+4.2%" icon={Users} />
           <Kpi label="Active buyers" value="312" delta="+1.8%" icon={TrendingUp} />
