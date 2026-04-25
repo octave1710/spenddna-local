@@ -26,7 +26,14 @@ const dna = [
 
 export function CitizenView() {
   const [expanded, setExpanded] = useState(true);
-  const [activated, setActivated] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [redeemed, setRedeemed] = useState(false);
+  const [balance, setBalance] = useState(4827.30);
+
+  const handleRedeem = () => {
+    setRedeemed(true);
+    setBalance(4829.00);
+  };
 
   return (
     <motion.div
