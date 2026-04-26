@@ -1,0 +1,21 @@
+merchant_id,name,category,location_lat,location_lng,customer_avg_age,traffic_pattern,current_inventory_status
+1,Café Müller,café,48.7765,9.1812,38,lunch_peak,surplus
+2,Wölffer Bakery,bakery,48.7748,9.1825,41,morning_peak,normal
+3,Espresso Königstraße,café,48.7790,9.1801,32,morning_peak,normal
+4,Konditorei Stengel,bakery,48.7770,9.1832,52,morning_peak,low
+5,Restaurant Da Mario,restaurant,48.7742,9.1841,45,evening_peak,normal
+6,Block House Schlossplatz,restaurant,48.7783,9.1797,47,evening_peak,normal
+7,Standard Serious,restaurant,48.7755,9.1862,34,weekend_heavy,normal
+8,McFit Mitte,gym,48.7820,9.1798,28,steady,normal
+9,FitX Stuttgart,gym,48.7745,9.1880,30,steady,normal
+10,REWE City,grocery,48.7775,9.1856,42,weekend_heavy,normal
+11,Edeka Center,grocery,48.7782,9.1798,44,evening_peak,normal
+12,Aldi Süd Mitte,grocery,48.7728,9.1810,48,steady,surplus
+13,Breuninger Stuttgart,fashion,48.7779,9.1820,45,weekend_heavy,normal
+14,COS Königstraße,fashion,48.7795,9.1810,31,weekend_heavy,low
+15,Wittwer-Thalia,bookstore,48.7796,9.1815,49,steady,normal
+16,Buchhandlung Osiander,bookstore,48.7752,9.1842,51,steady,normal
+17,Blumen Becker,florist,48.7762,9.1850,55,weekend_heavy,normal
+18,Floristik am Markt,florist,48.7745,9.1832,58,weekend_heavy,surplus
+19,Käse-Schwarz Cheese Shop,specialty,48.7758,9.1838,46,lunch_peak,normal
+20,Feinkost Böhm Delicatessen,specialty,48.7770,9.1825,53,lunch_peak,low

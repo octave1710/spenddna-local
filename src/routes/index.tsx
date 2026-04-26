@@ -5,6 +5,7 @@ import { Header } from "@/components/spend-dna/Header";
 import { ContextBar } from "@/components/spend-dna/ContextBar";
 import { CitizenView } from "@/components/spend-dna/CitizenView";
 import { MerchantView } from "@/components/spend-dna/MerchantView";
+import { DataProvenanceFooter } from "@/components/spend-dna/DataProvenanceFooter";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -19,12 +20,15 @@ export const Route = createFileRoute("/")({
 function Index() {
   const [mode, setMode] = useState<"citizen" | "merchant">("citizen");
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Header mode={mode} onChange={setMode} />
       <ContextBar />
-      <AnimatePresence mode="wait">
-        {mode === "citizen" ? <CitizenView key="c" /> : <MerchantView key="m" />}
-      </AnimatePresence>
+      <div className="flex-1">
+        <AnimatePresence mode="wait">
+          {mode === "citizen" ? <CitizenView key="c" /> : <MerchantView key="m" />}
+        </AnimatePresence>
+      </div>
+      <DataProvenanceFooter />
     </div>
   );
 }

@@ -1,0 +1,123 @@
+date,amount_eur,merchant_name,category,location_lat,location_lng,time_of_day,weekday
+2026-01-26,4.50,Café Müller,café,48.7765,9.1812,08:14,Monday
+2026-01-27,5.20,Wölffer Bakery,bakery,48.7748,9.1825,08:18,Tuesday
+2026-01-28,7.80,Deutsche Bahn,transport,48.7836,9.1815,17:50,Wednesday
+2026-01-28,28.50,Restaurant Da Mario,restaurant,48.7742,9.1841,19:50,Wednesday
+2026-01-29,4.80,Café Müller,café,48.7765,9.1812,08:12,Thursday
+2026-01-30,5.50,Wölffer Bakery,bakery,48.7748,9.1825,08:20,Friday
+2026-01-31,29.90,McFit Mitte,gym,48.7820,9.1798,09:35,Saturday
+2026-01-31,47.30,REWE,groceries,48.7775,9.1856,14:22,Saturday
+2026-01-31,38.50,Restaurant Da Mario,restaurant,48.7742,9.1841,19:45,Saturday
+2026-02-02,4.90,Café Müller,café,48.7765,9.1812,08:11,Monday
+2026-02-03,5.40,Wölffer Bakery,bakery,48.7748,9.1825,08:22,Tuesday
+2026-02-04,4.50,Café Müller,café,48.7765,9.1812,08:15,Wednesday
+2026-02-04,7.80,Deutsche Bahn,transport,48.7836,9.1815,17:50,Wednesday
+2026-02-05,9.99,Spotify,subscription,48.7795,9.1870,03:00,Thursday
+2026-02-05,5.20,Wölffer Bakery,bakery,48.7748,9.1825,08:17,Thursday
+2026-02-06,4.80,Café Müller,café,48.7765,9.1812,08:13,Friday
+2026-02-06,22.80,Edeka,groceries,48.7782,9.1798,19:18,Friday
+2026-02-07,52.10,REWE,groceries,48.7775,9.1856,13:48,Saturday
+2026-02-07,21.50,Standard Serious,restaurant,48.7755,9.1862,11:30,Saturday
+2026-02-09,4.60,Café Müller,café,48.7765,9.1812,08:16,Monday
+2026-02-10,12.40,Deutsche Bahn,transport,48.7836,9.1815,07:48,Tuesday
+2026-02-10,5.30,Wölffer Bakery,bakery,48.7748,9.1825,08:21,Tuesday
+2026-02-11,4.70,Café Müller,café,48.7765,9.1812,08:14,Wednesday
+2026-02-11,17.20,Edeka,groceries,48.7782,9.1798,19:40,Wednesday
+2026-02-12,5.10,Wölffer Bakery,bakery,48.7748,9.1825,08:19,Thursday
+2026-02-13,4.90,Café Müller,café,48.7765,9.1812,08:12,Friday
+2026-02-14,41.20,REWE,groceries,48.7775,9.1856,14:55,Saturday
+2026-02-14,32.50,Restaurant Da Mario,restaurant,48.7742,9.1841,20:15,Saturday
+2026-02-16,4.80,Café Müller,café,48.7765,9.1812,08:15,Monday
+2026-02-17,5.40,Wölffer Bakery,bakery,48.7748,9.1825,08:23,Tuesday
+2026-02-18,6.80,Deutsche Bahn,transport,48.7836,9.1815,17:40,Wednesday
+2026-02-19,4.50,Café Müller,café,48.7765,9.1812,08:11,Thursday
+2026-02-20,5.20,Wölffer Bakery,bakery,48.7748,9.1825,08:18,Friday
+2026-02-20,18.40,Edeka,groceries,48.7782,9.1798,19:35,Friday
+2026-02-21,49.80,REWE,groceries,48.7775,9.1856,14:10,Saturday
+2026-02-21,19.50,Standard Serious,restaurant,48.7755,9.1862,11:45,Saturday
+2026-02-23,4.70,Café Müller,café,48.7765,9.1812,08:14,Monday
+2026-02-24,5.50,Wölffer Bakery,bakery,48.7748,9.1825,08:20,Tuesday
+2026-02-25,4.60,Café Müller,café,48.7765,9.1812,08:13,Wednesday
+2026-02-25,9.40,Deutsche Bahn,transport,48.7836,9.1815,18:10,Wednesday
+2026-02-26,14.20,Deutsche Bahn,transport,48.7836,9.1815,08:05,Thursday
+2026-02-26,5.30,Wölffer Bakery,bakery,48.7748,9.1825,08:21,Thursday
+2026-02-27,4.80,Café Müller,café,48.7765,9.1812,08:12,Friday
+2026-02-27,42.80,Restaurant Da Mario,restaurant,48.7742,9.1841,19:50,Friday
+2026-02-28,29.90,McFit Mitte,gym,48.7820,9.1798,09:42,Saturday
+2026-02-28,56.40,REWE,groceries,48.7775,9.1856,13:55,Saturday
+2026-03-02,4.90,Café Müller,café,48.7765,9.1812,08:15,Monday
+2026-03-03,5.20,Wölffer Bakery,bakery,48.7748,9.1825,08:19,Tuesday
+2026-03-04,4.50,Café Müller,café,48.7765,9.1812,08:11,Wednesday
+2026-03-04,8.60,Deutsche Bahn,transport,48.7836,9.1815,07:55,Wednesday
+2026-03-05,9.99,Spotify,subscription,48.7795,9.1870,03:00,Thursday
+2026-03-05,5.40,Wölffer Bakery,bakery,48.7748,9.1825,08:22,Thursday
+2026-03-06,4.70,Café Müller,café,48.7765,9.1812,08:14,Friday
+2026-03-06,24.60,Edeka,groceries,48.7782,9.1798,19:20,Friday
+2026-03-07,44.30,REWE,groceries,48.7775,9.1856,14:18,Saturday
+2026-03-07,22.80,Standard Serious,restaurant,48.7755,9.1862,11:25,Saturday
+2026-03-09,4.80,Café Müller,café,48.7765,9.1812,08:16,Monday
+2026-03-10,5.30,Wölffer Bakery,bakery,48.7748,9.1825,08:20,Tuesday
+2026-03-10,23.50,Edeka,groceries,48.7782,9.1798,19:15,Tuesday
+2026-03-11,4.60,Café Müller,café,48.7765,9.1812,08:13,Wednesday
+2026-03-11,11.80,Deutsche Bahn,transport,48.7836,9.1815,18:25,Wednesday
+2026-03-12,5.10,Wölffer Bakery,bakery,48.7748,9.1825,08:18,Thursday
+2026-03-13,4.90,Café Müller,café,48.7765,9.1812,08:12,Friday
+2026-03-13,36.80,Restaurant Da Mario,restaurant,48.7742,9.1841,20:05,Friday
+2026-03-14,51.20,REWE,groceries,48.7775,9.1856,14:32,Saturday
+2026-03-14,36.40,Restaurant Da Mario,restaurant,48.7742,9.1841,20:05,Saturday
+2026-03-16,4.70,Café Müller,café,48.7765,9.1812,08:14,Monday
+2026-03-17,5.40,Wölffer Bakery,bakery,48.7748,9.1825,08:21,Tuesday
+2026-03-18,4.80,Café Müller,café,48.7765,9.1812,08:11,Wednesday
+2026-03-19,7.60,Deutsche Bahn,transport,48.7836,9.1815,07:55,Thursday
+2026-03-19,5.20,Wölffer Bakery,bakery,48.7748,9.1825,08:19,Thursday
+2026-03-20,4.50,Café Müller,café,48.7765,9.1812,08:15,Friday
+2026-03-20,21.30,Edeka,groceries,48.7782,9.1798,19:42,Friday
+2026-03-21,48.60,REWE,groceries,48.7775,9.1856,14:08,Saturday
+2026-03-21,20.80,Standard Serious,restaurant,48.7755,9.1862,11:38,Saturday
+2026-03-23,4.90,Café Müller,café,48.7765,9.1812,08:13,Monday
+2026-03-24,5.30,Wölffer Bakery,bakery,48.7748,9.1825,08:20,Tuesday
+2026-03-24,8.80,Deutsche Bahn,transport,48.7836,9.1815,07:58,Tuesday
+2026-03-25,4.60,Café Müller,café,48.7765,9.1812,08:12,Wednesday
+2026-03-26,13.40,Deutsche Bahn,transport,48.7836,9.1815,08:02,Thursday
+2026-03-26,5.40,Wölffer Bakery,bakery,48.7748,9.1825,08:22,Thursday
+2026-03-27,4.80,Café Müller,café,48.7765,9.1812,08:14,Friday
+2026-03-27,28.50,Restaurant Da Mario,restaurant,48.7742,9.1841,19:35,Friday
+2026-03-28,29.90,McFit Mitte,gym,48.7820,9.1798,09:48,Saturday
+2026-03-28,53.20,REWE,groceries,48.7775,9.1856,13:42,Saturday
+2026-03-30,4.70,Café Müller,café,48.7765,9.1812,08:15,Monday
+2026-03-31,5.20,Wölffer Bakery,bakery,48.7748,9.1825,08:18,Tuesday
+2026-04-01,4.50,Café Müller,café,48.7765,9.1812,08:11,Wednesday
+2026-04-01,19.40,Restaurant Da Mario,restaurant,48.7742,9.1841,20:00,Wednesday
+2026-04-02,5.50,Wölffer Bakery,bakery,48.7748,9.1825,08:23,Thursday
+2026-04-03,4.90,Café Müller,café,48.7765,9.1812,08:13,Friday
+2026-04-03,19.80,Edeka,groceries,48.7782,9.1798,19:25,Friday
+2026-04-04,45.70,REWE,groceries,48.7775,9.1856,14:25,Saturday
+2026-04-04,23.50,Standard Serious,restaurant,48.7755,9.1862,11:20,Saturday
+2026-04-05,9.99,Spotify,subscription,48.7795,9.1870,03:00,Sunday
+2026-04-06,4.80,Café Müller,café,48.7765,9.1812,08:14,Monday
+2026-04-07,5.30,Wölffer Bakery,bakery,48.7748,9.1825,08:20,Tuesday
+2026-04-08,9.20,Deutsche Bahn,transport,48.7836,9.1815,07:50,Wednesday
+2026-04-08,4.60,Café Müller,café,48.7765,9.1812,08:16,Wednesday
+2026-04-09,5.40,Wölffer Bakery,bakery,48.7748,9.1825,08:21,Thursday
+2026-04-10,4.70,Café Müller,café,48.7765,9.1812,08:12,Friday
+2026-04-10,39.80,Restaurant Da Mario,restaurant,48.7742,9.1841,20:10,Friday
+2026-04-11,49.40,REWE,groceries,48.7775,9.1856,14:15,Saturday
+2026-04-13,4.90,Café Müller,café,48.7765,9.1812,08:13,Monday
+2026-04-14,5.20,Wölffer Bakery,bakery,48.7748,9.1825,08:19,Tuesday
+2026-04-15,4.50,Café Müller,café,48.7765,9.1812,08:14,Wednesday
+2026-04-15,12.60,Deutsche Bahn,transport,48.7836,9.1815,08:08,Wednesday
+2026-04-16,16.80,Deutsche Bahn,transport,48.7836,9.1815,17:35,Thursday
+2026-04-16,5.30,Wölffer Bakery,bakery,48.7748,9.1825,08:22,Thursday
+2026-04-17,4.80,Café Müller,café,48.7765,9.1812,08:11,Friday
+2026-04-17,26.40,Edeka,groceries,48.7782,9.1798,19:30,Friday
+2026-04-18,54.80,REWE,groceries,48.7775,9.1856,14:02,Saturday
+2026-04-18,18.50,Standard Serious,restaurant,48.7755,9.1862,11:50,Saturday
+2026-04-18,34.20,Restaurant Da Mario,restaurant,48.7742,9.1841,19:55,Saturday
+2026-04-20,4.70,Café Müller,café,48.7765,9.1812,08:15,Monday
+2026-04-21,5.50,Wölffer Bakery,bakery,48.7748,9.1825,08:20,Tuesday
+2026-04-22,4.90,Café Müller,café,48.7765,9.1812,08:13,Wednesday
+2026-04-23,5.10,Wölffer Bakery,bakery,48.7748,9.1825,08:18,Thursday
+2026-04-23,11.20,Deutsche Bahn,transport,48.7836,9.1815,18:15,Thursday
+2026-04-24,4.60,Café Müller,café,48.7765,9.1812,08:14,Friday
+2026-04-25,46.80,REWE,groceries,48.7775,9.1856,14:28,Saturday
+2026-04-25,22.40,Standard Serious,restaurant,48.7755,9.1862,11:35,Saturday

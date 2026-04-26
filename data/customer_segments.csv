@@ -1,0 +1,7 @@
+segment_id,segment_name,count,avg_spend_local_eur,top_categories,time_of_day_peak
+1,Morning Commuter,412,6.40,café;bakery;transport,07:30-09:00
+2,Weekend Family,289,84.60,grocery;restaurant;bakery,11:00-15:00
+3,Evening Diner,501,42.30,restaurant;café;specialty,19:00-22:00
+4,Gym Regular,178,31.80,gym;grocery;café,06:30-08:30
+5,Senior Local,134,27.50,bakery;florist;bookstore,10:00-12:00
+6,Tourist,89,58.20,restaurant;fashion;café,12:00-18:00

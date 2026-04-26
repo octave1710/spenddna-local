@@ -7,9 +7,21 @@ interface Props {
   open: boolean;
   onClose: () => void;
   onRedeem: () => void;
+  merchantName?: string;
+  distanceM?: number;
+  cashback?: number;
+  matchScore?: number;
 }
 
-export function RedeemModal({ open, onClose, onRedeem }: Props) {
+export function RedeemModal({
+  open,
+  onClose,
+  onRedeem,
+  merchantName = "Café Müller",
+  distanceM = 80,
+  cashback = 1.70,
+  matchScore = 94,
+}: Props) {
   const [stage, setStage] = useState<"qr" | "success">("qr");
   const [seconds, setSeconds] = useState(12 * 60);
 
@@ -82,7 +94,7 @@ export function RedeemModal({ open, onClose, onRedeem }: Props) {
                   <div className="text-center">
                     <div className="text-[11px] uppercase tracking-[0.14em] text-success">● Live offer</div>
                     <h2 className="mt-2 text-[20px] font-semibold tracking-tight">Offer activated</h2>
-                    <p className="mt-1 text-[12.5px] text-muted-foreground">Café Müller · 80m away</p>
+                    <p className="mt-1 text-[12.5px] text-muted-foreground">{merchantName} · {distanceM}m away</p>
                   </div>
 
                   <div className="mt-5 flex justify-center">
@@ -103,7 +115,7 @@ export function RedeemModal({ open, onClose, onRedeem }: Props) {
                       {mm}:{ss}
                     </div>
                     <p className="mt-3 text-[12.5px] text-muted-foreground leading-relaxed">
-                      Show this at checkout — <span className="text-success font-medium">€1.70 cashback</span> to your Sparkasse account
+                      Show this at checkout — <span className="text-success font-medium">€{cashback.toFixed(2)} cashback</span> to your Sparkasse account
                     </p>
                   </div>
 
@@ -147,7 +159,7 @@ export function RedeemModal({ open, onClose, onRedeem }: Props) {
                     transition={{ delay: 0.18 }}
                     className="mt-5 text-[19px] font-semibold tracking-tight"
                   >
-                    Redeemed at Café Müller
+                    Redeemed at {merchantName}
                   </motion.h2>
                   <motion.p
                     initial={{ opacity: 0, y: 6 }}
@@ -155,7 +167,7 @@ export function RedeemModal({ open, onClose, onRedeem }: Props) {
                     transition={{ delay: 0.26 }}
                     className="mt-1.5 text-[13px] text-muted-foreground"
                   >
-                    <span className="text-success font-medium">€1.70</span> credited to your Sparkasse account
+                    <span className="text-success font-medium">€{cashback.toFixed(2)}</span> credited to your Sparkasse account
                   </motion.p>
                 </motion.div>
               )}
